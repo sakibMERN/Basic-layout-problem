@@ -1,0 +1,101 @@
+/* Ensure all elements include padding and border in their box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Basic styles for the body */
+body {
+  font-family: Arial;
+  padding: 10px;
+  background-color: #f1cf0a;
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  font-size: larger;
+}
+
+/* Top navigation bar styles */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(6, 6, 6);
+}
+
+/* Top navigation links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Hover effect for top navigation links */
+.topnav a:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* Left column styles */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column styles */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Placeholder styles for images */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Card styles for content boxes */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  background-color: #696960;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive layout for screens smaller than 800px */
+@media screen and (max-width: 800px) {
+  /* Make columns full-width */
+  .leftcolumn, .rightcolumn {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout for screens smaller than 400px */
+@media screen and (max-width: 400px) {
+  /* Make top navigation links stack vertically */
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
