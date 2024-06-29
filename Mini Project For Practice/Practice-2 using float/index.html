@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Layout with Float</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/e7d365f835.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header {
+        background-color: #7b7878;
+        color: rgb(249, 247, 247);
+        padding: 15px;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      ul.top-menu {
+        list-style-type: none;
+        background-color: rgb(78, 204, 53);
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      ul.top-menu li {
+        float: left;
+      }
+      .top-menu li a{
+        display: inline-block;
+        padding: 15px;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+      }
+
+      .top-menu li a:hover{
+        background-color: orange;
+        color: black;
+      }
+
+      .top-menu li a.active{
+        background-color: red;
+      }
+      
+      .column{
+        float: left;
+        padding: 15px;
+      }
+      .sidemenu{
+        width: 25%;
+      }
+      .content{
+        width: 75%;
+      }
+      .sidemenu ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sidemenu li a{
+        display: block;
+        background-color: rgb(154, 205, 50);
+        margin-bottom: 5px;
+        padding: 25px;
+        border: 2px solid orange;
+        border-radius: 10px;
+        text-decoration: none;
+
+      }
+
+      .sidemenu li a:hover{
+        background-color: orange;
+        color: black;
+      }
+      .sidemenu li a.active{
+        background-color: red;
+        color: black;
+      }
+      
+      .content .content-box{
+        background-color: rgb(154, 205, 50);
+      }
+
+      .content>h2{
+        border-left: 5px solid red;
+        border-bottom: 3px solid #7b7878;
+        border-radius: 7px;
+      }
+      .clearfix::after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .footer{
+        background-color: #7b7878;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        
+      }
+
+    </style>
+  </head>
+  <body>
+    <ul class="top-menu">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <div class="clearfix">
+        <div class="column sidemenu">
+            <ul>
+                <li><a href="#flight">The Flight</a></li>
+                <li><a href="#city">The City</a></li>
+                <li><a class="active" href="#iceland">The Iceland</a></li>
+                <li><a href="#food">The Food</a></li>
+                <li><a href="#people">The People</a></li>
+                <li><a href="#history">The history</a></li>
+                <li><a href="#ocean">The Ocean</a></li>
+            </ul>
+        </div>
+        <div class="column content">
+            <div class="header">
+                <h2>The City</h2>
+            </div>
+            <h2>Go with your dream</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique neque iusto laborum molestias autem voluptatibus non ut delectus ea labore facilis obcaecati quaerat officia ipsum temporibus, distinctio reiciendis praesentium iste quis itaque voluptatum? Aliquid sequi, tempora ex nihil ducimus reprehenderit molestias dolore accusantium libero dolorum veritatis doloribus velit! Omnis voluptas aliquid autem! Nesciunt assumenda rem laboriosam nulla nihil. Dolorem impedit consequuntur laboriosam facilis aliquam, delectus labore fuga tempore quos earum reiciendis quas sequi iusto. Quo, vitae qui perspiciatis, aperiam veniam impedit consequuntur possimus sequi perferendis, sapiente voluptas nesciunt! Culpa iste atque fuga tenetur sint soluta vitae odit sunt ea incidunt?</p>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+  </body>
+</html>
